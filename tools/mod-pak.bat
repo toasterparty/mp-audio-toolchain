@@ -2,9 +2,9 @@
 
 xcopy %SCRIPT_DIR%\mods\Audio %SCRIPT_DIR%\prime\pakdump\dump\root\Audio\ /u /s /y
 
-xcopy %SCRIPT_DIR%\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp %SCRIPT_DIR%\prime\pakdump\AudioGroup\ /s /y
+xcopy %SCRIPT_DIR%\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp %SCRIPT_DIR%\prime\pakdump\AudioGrpNew\ /s /y
 
-cd %SCRIPT_DIR%\prime\pakdump\AudioGroup
+cd %SCRIPT_DIR%\prime\pakdump\AudioGrpNew
 
 ren Atomic_AE0230B6 AE0230B6.AGSC
 ren BetaBeetle_8CCDD026 8CCDD026.AGSC
@@ -80,6 +80,8 @@ ren sound_lookup_B7C1B3A7 B7C1B3A7.ATBL
 ren test_1EE1AD21 1EE1AD21.AGSC
 
 cd %SCRIPT_DIR%
+
+xcopy %SCRIPT_DIR%\prime\pakdump\AudioGrpNew\ %SCRIPT_DIR%\prime\pakdump\AudioGrp\ /u /s /y
 
 %SCRIPT_DIR%\tools\paktool\PakTool.exe -r MP1 %SCRIPT_DIR%\prime\pakdump\AudioGrp %SCRIPT_DIR%\prime\pakdump\AudioGrp.pak %SCRIPT_DIR%\tools\paktool\AudioGrp-pak.txt
 

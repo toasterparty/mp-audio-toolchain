@@ -10,7 +10,7 @@ for /d %%i in (%SCRIPT_DIR%\prime\pakdump\*) do (
 ren "%%i" dump
 )
 
-echo %SCRIPT_DIR%\tools\paktool\PakTool.exe -x %SCRIPT_DIR%\prime\pakdump\dump\root\AudioGrp.pak -o %SCRIPT_DIR%\prime\pakdump\AudioGrp\
+%SCRIPT_DIR%\tools\paktool\PakTool.exe -x %SCRIPT_DIR%\prime\pakdump\dump\root\AudioGrp.pak -o %SCRIPT_DIR%\prime\pakdump\AudioGrp\
 
 %SCRIPT_DIR%\tools\urde\hecl.exe extract -y prime.iso AudioGrp.pak
 
