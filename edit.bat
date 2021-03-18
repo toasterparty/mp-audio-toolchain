@@ -2,4 +2,4 @@
 set SCRIPT_DIR=%cd%
 call %SCRIPT_DIR%\tools\tools.bat
 
-pause
+%SCRIPT_DIR%\tools\audacity\audacity.exe
