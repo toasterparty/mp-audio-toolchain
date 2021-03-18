@@ -2,6 +2,7 @@
 set SCRIPT_DIR=%cd%
 
 del *.iso
+del *.tmp
 
 if exist %SCRIPT_DIR%\prime rmdir %SCRIPT_DIR%\prime /s /q
 

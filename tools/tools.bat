@@ -2,6 +2,12 @@
 set WGET=%SCRIPT_DIR%\tools\wget.exe -nc
 set UNZIP=%SCRIPT_DIR%\tools\7zip\7za.exe -bb0 -bd -y x
 
+if not exist mods mkdir mods
+cd mods
+if not exist Audio mkdir Audio
+if not exist AudioGrp mkdir AudioGrp
+cd ..
+
 if not exist tools mkdir tools
 cd tools
 
