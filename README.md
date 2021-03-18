@@ -10,7 +10,7 @@ Note that it is illegal to share the source game data directly, so only custom s
 Copy your legally obtained copy of Metroid Prime to the root directory and name it `prime.iso`. Double click `extract.bat` and wait for the audio files to be extracted from your game.
 
 ## Edit Audio
-Double 
+Double click `edit.bat` to launch audacity. Then TBD.
 
 # Credits
 
