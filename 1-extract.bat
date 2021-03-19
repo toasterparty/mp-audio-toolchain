@@ -14,7 +14,7 @@ ren "%%i" dump
 
 %SCRIPT_DIR%\tools\urde\hecl.exe extract -y prime.iso AudioGrp.pak
 
-if exist %SCRIPT_DIR%\prime\MP1\AudioGrp-clean\ rmdir %SCRIPT_DIR%\prime\MP1\AudioGrp-clean\ /s /q
-xcopy %SCRIPT_DIR%\prime\MP1\AudioGrp\ %SCRIPT_DIR%\prime\MP1\AudioGrp-clean\ /s /y
+if exist %SCRIPT_DIR%\prime\AudioGrp-clean\ rmdir %SCRIPT_DIR%\prime\AudioGrp-clean\ /s /q
+xcopy %SCRIPT_DIR%\prime\MP1\AudioGrp\ %SCRIPT_DIR%\prime\AudioGrp-clean\ /s /y
 
 pause
