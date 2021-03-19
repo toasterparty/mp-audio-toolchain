@@ -16,7 +16,14 @@ There are 5 `.bat` files which streamline the modding process. To use them, simp
 Clears all of the cached data. You should only need to use this if you having problems.
 
 ## 1 - Extract
+Extracts all of the audio files from the game so that they can be viewed and replaced. First, copy your legally obtained copy of Metroid Prime 1 for the Nintendo Gamecube in the base folder and name it `prime.iso`. Then run `1-extract.bat`.
 
+The original music audio will be extracted to `prime/AudioGrp-clean/` and the sound effects to `prime/AudioGrp-clean/`.
+
+## 2 - Edit
+Run `2-edit.bat` to launch a special version of Audacity that can handle.
+
+This version of Audacity is prone to crashes, so I recommend doing all audio work outside of this Audacity version beforehand.
 
 # Credits
 
