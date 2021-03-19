@@ -1,5 +1,5 @@
 @echo off
-set SCRIPT_DIR=%cd%\..
+set SCRIPT_DIR=%cd%
 
 cd %SCRIPT_DIR%
 del *.tmp
