@@ -1,7 +1,7 @@
 @echo off
-set SCRIPT_DIR=%cd%
+set SCRIPT_DIR=%cd%\..
 
-del *.iso
+cd %SCRIPT_DIR%
 del *.tmp
 
 if exist %SCRIPT_DIR%\prime rmdir %SCRIPT_DIR%\prime /s /q

@@ -2,7 +2,7 @@
 set SCRIPT_DIR=%cd%
 call %SCRIPT_DIR%\tools\tools.bat
 
-if exist %SCRIPT_DIR%\prime\pakdump rmdir %SCRIPT_DIR%\prime\pakdump /s /q
+if exist %SCRIPT_DIR%\prime\pakdump\ rmdir %SCRIPT_DIR%\prime\pakdump\ /s /q
 
 %SCRIPT_DIR%\tools\gcit\gcit.exe %SCRIPT_DIR%\prime.iso -f GCReEx -q -d %SCRIPT_DIR%\prime\pakdump\
 

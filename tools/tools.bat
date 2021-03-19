@@ -1,7 +1,9 @@
 @echo off
 set WGET=%SCRIPT_DIR%\tools\wget.exe -nc
 set UNZIP=%SCRIPT_DIR%\tools\7zip\7za.exe -bb0 -bd -y x
+set ZIP=%SCRIPT_DIR%\tools\7zip\7za.exe a -tzip
 
+cd %SCRIPT_DIR%
 if not exist mods mkdir mods
 cd mods
 if not exist Audio mkdir Audio
@@ -28,8 +30,7 @@ cd ..
 
 if not exist urde mkdir urde
 cd urde
-%WGET% https://releases.axiodl.com/dev/win32/urde-31-win32-x86_64-sse41.zip
-%UNZIP% urde-31-win32-x86_64-sse41.zip > nul
+%UNZIP% urde-50-win32-x86_64.zip > nul
 cd ..
 
 cd ..
