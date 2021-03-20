@@ -64,12 +64,12 @@ When you are all done, your mods folder should mirror a subset of the vanilla fi
 
 In the next step, these files will be merged with the game's files and packaged into an ISO.
 
-# 3 - Test
+## 3 - Test
 Simply click `3-test.bat` and wait for it to complete. It will eventually output an ISO file into the base directory with the name of the game on it. Play this iso to test your changes, but do not share it online (that's illegal silly).
 
 The first time you run this command, it may take 10-20 minutes. After this first execution, it will be significantly faster.
 
-# 4 - Distribute
+## 4 - Distribute
 TBD
 
 # Credits
