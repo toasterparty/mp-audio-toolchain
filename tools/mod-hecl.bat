@@ -1,7 +1,4 @@
 @echo off
-if exist %SCRIPT_DIR%\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp rmdir %SCRIPT_DIR%\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp /s /q
-xcopy %SCRIPT_DIR%\prime\AudioGrp-clean\ %SCRIPT_DIR%\prime\MP1\AudioGrp\ /u /s /y
-xcopy %SCRIPT_DIR%\mods\AudioGrp %SCRIPT_DIR%\prime\MP1\AudioGrp\ /u /s /y
 
 SET HDR_CP=%SCRIPT_DIR%\tools\dsp-header-copy\dsp-header-copy.exe
 SET CLEAN_DIR=%SCRIPT_DIR%\prime\AudioGrp-clean
@@ -1126,3 +1123,8 @@ if exist %SCRIPT_DIR%\mods\AudioGrp\test_1EE1AD21\sample0003.dsp %HDR_CP% %CLEAN
 if exist %SCRIPT_DIR%\mods\AudioGrp\test_1EE1AD21\sample00ED.dsp %HDR_CP% %CLEAN_DIR%\test_1EE1AD21\sample00ED.dsp %MOD_DIR%\test_1EE1AD21\sample00ED.dsp
 if exist %SCRIPT_DIR%\mods\AudioGrp\test_1EE1AD21\sample00EF.dsp %HDR_CP% %CLEAN_DIR%\test_1EE1AD21\sample00EF.dsp %MOD_DIR%\test_1EE1AD21\sample00EF.dsp
 if exist %SCRIPT_DIR%\mods\AudioGrp\test_1EE1AD21\sample00F0.dsp %HDR_CP% %CLEAN_DIR%\test_1EE1AD21\sample00F0.dsp %MOD_DIR%\test_1EE1AD21\sample00F0.dsp
+
+
+if exist %SCRIPT_DIR%\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp rmdir %SCRIPT_DIR%\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp /s /q
+xcopy %SCRIPT_DIR%\prime\AudioGrp-clean\ %SCRIPT_DIR%\prime\MP1\AudioGrp\ /u /s /y
+xcopy %SCRIPT_DIR%\mods\AudioGrp %SCRIPT_DIR%\prime\MP1\AudioGrp\ /u /s /y

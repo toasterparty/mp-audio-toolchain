@@ -1,9 +1,9 @@
 # Metroid Prime Audio Toolchain
-This repository is a streamlined toolchain for modifying music and sound effects in Metroid Prime, and packaging them for distribution. This is for Windows only (tested on Windows 10). 
+This repository is a streamlined toolchain for modifying music and sound effects in Metroid Prime, and packaging them for distribution. This is for Windows only (tested on Windows 10).
 
 It is illegal to share the any of the original game's data, so *only* custom audio can be distributed when sharing custom audio mods. This used to be tricky because sound effects in this game are packaged tightly around similar audio files. This tools helps by providing a way to isolate just the custom audio files from the rest of the game and a means of packaging them so that a user has everything they need to apply it stored in a single .zip file.
 
-Please note that I am only the author of the batch scripts. Please see each included tool's license and/or homepage for more information.
+Please note that I am the author of thxe batch scripts. Please see each included tool's license and/or homepage for more information.
 
 # Usage
 *Note: These tools can sometimes be falsely flagged as viruses by aftermarket antivirus programs. Disable your antivirus before using this toolchain.*
@@ -24,6 +24,8 @@ The original music audio will be extracted to `prime/AudioGrp-clean/` and the so
 Run `2-edit.bat` to launch a special version of Audacity that can handle.
 
 This version of Audacity is prone to crashes, so I recommend doing all audio work outside of this Audacity version beforehand.
+
+
 
 # Credits
 
