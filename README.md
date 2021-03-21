@@ -45,16 +45,16 @@ To do this, click `File > Export > Export Audio...`.
 
 "Save as type:" should be "DSPADPCM (.dsp)".
 
-For mono samples use `Layout: Standard Mono`. For stero samples use `Layout: RS03 Stero`.
+For both mono and stero samples use `Layout: Standard Mono`. The stero option is for Metroid Prime 2 *only*.
 
-The output filename should be identical as the file you intend to replace. Note that if you're outputting RS03 Stero, it will save 2 files, each with and L and R appended.
+The output filename should be identical as the file you intend to replace. Note that if you're outputting a stero project, it will save 2 files, each with and L and R appended.
 
 Then click Save.
 
 When you are all done, your mods folder should mirror a subset of the vanilla file structure. Here's an example:
 ```
 /mods/Audio/int_introcinemaL.dsp
-/mods/Audio/int_introcinemar.dsp
+/mods/Audio/int_introcinemaR.dsp
 /mods/Audio/gen_ShortBattleL.dsp
 /mods/Audio/gen_ShortBattleR.dsp
 /mods/AudioGrp/Weapons_8081183E/sample00D1.dsp
