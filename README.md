@@ -1,12 +1,12 @@
 # Metroid Prime Audio Toolchain
 This repository is a streamlined toolchain for modifying music and sound effects in Metroid Prime, and packaging them for distribution. This is for Windows only (tested on Windows 10).
 
-It is illegal to share the any of the original game's data, so *only* custom audio can be distributed when sharing custom audio mods. This used to be tricky because sound effects in this game are packaged tightly around similar audio files. This tools helps by providing a way to isolate just the custom audio files from the rest of the game and a means of packaging them so that a user has everything they need to apply it stored in a single .zip file.
+It is illegal to share the any of the original game's data, so *only* custom audio can be distributed when sharing custom audio mods. This used to be tricky because sound effects in this game are packaged tightly amonst other game data. This tools helps by providing a way to isolate just the custom audio files from the rest of the game and a means of packaging them so that a user has everything they need to apply it stored in a single .zip file.
 
 Please note that I am the only author of the batch scripts and `dsp-header-copy`. Please see each included tool's license and/or homepage for more information.
 
 # Usage
-*Note: These tools can sometimes be falsely flagged as viruses by aftermarket antivirus programs. Disable your antivirus before using this toolchain.*
+*Note: These tools can sometimes be falsely flagged as viruses by 3rd party antivirus programs. Disable your antivirus before using this toolchain.*
 
 YouTube Guide: TBD
 
@@ -20,15 +20,15 @@ Clears all of the cached data. You should only need to use this if you having pr
 ## 1 - Extract
 Extracts all of the audio files from the game so that they can be viewed and replaced. First, copy your legally obtained copy of Metroid Prime 1 for the Nintendo Gamecube in the base folder and name it `prime.iso`. Then run `1-extract.bat`.
 
-The original music audio will be extracted to `prime/AudioGrp-clean/` and the sound effects to `prime/AudioGrp-clean/`.
+The original music audio will be extracted to `prime/Audio-clean/` and the sound effects to `prime/AudioGrp-clean/`.
 
 ## 2 - Edit
-Run `2-edit.bat` to launch a special version of Audacity that can handle. You can make things easier by telling Windows to associate the `.dsp` file extension with the `/tools/audacity/Audacity.exe` executable.
+Run `2-edit.bat` to launch a special version of Audacity that can handle the `.dsp` audio format used by Prime. You can make things easier by telling Windows to associate the `.dsp` file extension with the `/tools/audacity/Audacity.exe` executable.
 
 *NOTE: This version of Audacity is prone to crashes, so I recommend doing any complicated audio work outside of this Audacity version beforehand.*
 
 ### 2.1 Browsing Files
-Use Audacity to open any `.dsp` file you want to modify or replace from the extracted files.
+Use Audacity to open any `.dsp` file you want to modify from the extracted files.
 
 When viewing in Audacity, note the looping points. You cannot change these, so make sure you are okay with your custom audio looping at these points in the sample.
 
@@ -70,7 +70,7 @@ Simply click `3-test.bat` and wait for it to complete. It will eventually output
 The first time you run this command, it may take 10-20 minutes. After this first execution, it will be significantly faster.
 
 ## 4 - Distribute
-TBD
+TBD (If you want to share your work, you should only need to share your `mods` folder)
 
 # Credits
 
