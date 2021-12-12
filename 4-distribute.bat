@@ -25,6 +25,7 @@ rmdir %MOD_NAME%\tools\7zip /s /q
 rmdir %MOD_NAME%\tools\audacity /s /q
 rmdir %MOD_NAME%\tools\dsp-header-copy /s /q
 del %MOD_NAME%\tools\wget.exe
+del %MOD_NAME%\tools\mod-hecl.bat
 del %MOD_NAME%\tools\tools.bat
 del %MOD_NAME%\tools\.gitignore
 del %MOD_NAME%\tools\urde\*.zip
@@ -37,9 +38,8 @@ del %MOD_NAME%\tools\gcit\.gitignore
 %ZIP% %MOD_NAME%.zip %MOD_NAME%
 
 rmdir %SCRIPT_DIR%\mods\%MOD_NAME%\ /s /q
-
-echo ""
-echo ""
-echo ""
+echo .
+echo .
+echo .
 echo "Created standalone package 'mods\%MOD_NAME%.zip'"
 pause

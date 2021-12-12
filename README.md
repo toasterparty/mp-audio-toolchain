@@ -36,7 +36,7 @@ Note the sample rate - some files may use a sample rate far lower than you are u
 
 If it is an AudioGrp file, note the name of the subfolder which contains the audio sample (e.g. `ChozoGhost_EA6B4117`). This will be important later.
 
-Finally, note whether the file is mono or stero. Your custom audio will have to match. To mix a stero track down to mono, use `Tracks > Mix > Mix Stero Down to Mono`.
+Finally, note whether the file is mono or stereo. Your custom audio will have to match. To mix a stereo track down to mono, use `Tracks > Mix > Mix Stereo Down to Mono`.
 
 ### 2.2 Exporting
 Once you have finished modifying existing in Audacity, you need to export it to the `mods` folder.
@@ -45,9 +45,9 @@ To do this, click `File > Export > Export Audio...`.
 
 "Save as type:" should be "DSPADPCM (.dsp)".
 
-For both mono and stero samples use `Layout: Standard Mono`. The stero option is for Metroid Prime 2 *only*.
+For both mono and stereo samples use `Layout: Standard Mono`. The stereo option is for Metroid Prime 2 *only*.
 
-The output filename should be identical as the file you intend to replace. Note that if you're outputting a stero project, it will save 2 files, each with and L and R appended.
+The output filename should be identical as the file you intend to replace. Note that if you're outputting a stereo project, it will save 2 files, each with and L and R appended.
 
 Then click Save.
 
@@ -70,13 +70,13 @@ Simply click `3-test.bat` and wait for it to complete. It will eventually output
 The first time you run this command, it may take 10-20 minutes. After this first execution, it will be significantly faster.
 
 ## 4 - Distribute
-TBD (If you want to share your work, you should only need to share your `mods` folder)
+Click `4-distribute.bat` and enter in the name of the mod (do not use spaces). Once packaging is complete, a zip file will be created in the `mods` folder. As long as there is no copyrighted content in your `mods/Audio` and `mods/AudioGrp` folders, the output zip file can be legally distributed and used to install your mod.
 
 # Credits
 
 DSPADPCM Audacity Fork - https://github.com/jackoalan/audacity
 
-URDE - https://axiodl.com/
+HECL - https://axiodl.com/
 
 PakTool - https://github.com/arukibree/PakTool
 

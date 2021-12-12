@@ -31,5 +31,3 @@ cd %SCRIPT_DIR%
 call %SCRIPT_DIR%\tools\mod-pak.bat
 
 %SCRIPT_DIR%\tools\gcit\gcit.exe %SCRIPT_DIR%\prime\pakdump\dump -q -d %SCRIPT_DIR%\prime_audio_mod.iso
-
-pause
