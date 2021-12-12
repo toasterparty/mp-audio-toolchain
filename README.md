@@ -32,7 +32,9 @@ Use Audacity to open any `.dsp` file you want to modify from the extracted files
 
 When viewing in Audacity, note the looping points. You cannot change these, so make sure you are okay with your custom audio looping at these points in the sample.
 
-Note the sample rate - some files may use a sample rate far lower than you are used to.
+Note the sample rate - Some files may use a sample rate far lower than you are used to.
+
+Note the length of the sample - The new file should be the same length, if the replacement is too shot or too long, there may be glitches.
 
 If it is an AudioGrp file, note the name of the subfolder which contains the audio sample (e.g. `ChozoGhost_EA6B4117`). This will be important later.
 
