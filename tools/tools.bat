@@ -10,27 +10,26 @@ if not exist Audio mkdir Audio
 if not exist AudioGrp mkdir AudioGrp
 cd ..
 
-if not exist tools mkdir tools
 cd tools
 
-if not exist gcit mkdir gcit
 cd gcit
-%UNZIP% gcit_Win32_Build7.zip > nul
+%UNZIP% gcit_Win32_Build7.7z > nul
 cd ..
 
-if not exist paktool mkdir paktool
 cd paktool
-%UNZIP% paktool.zip > nul
+%UNZIP% paktool.7z > nul
 cd ..
 
-if not exist audacity mkdir audacity
 cd audacity
-%SCRIPT_DIR%\tools\7zip\7za.exe -bb0 -bd -y e audacity-gcdspadpcm-2.3.0-win.zip > nul
+%SCRIPT_DIR%\tools\7zip\7za.exe -bb0 -bd -y e audacity-gcdspadpcm-2.3.0-win.7z > nul
 cd ..
 
-if not exist metaforce mkdir metaforce
 cd metaforce
 %UNZIP% metaforce-v0.1.3-155-win32-x86_64.7z > nul
+cd ..
+
+cd dsp-header-copy
+%UNZIP% dsp-header-copy.7z > nul
 cd ..
 
 cd ..
