@@ -14,7 +14,7 @@ xcopy %SCRIPT_DIR%\prime\pakdump\dump\root\Audio\ %SCRIPT_DIR%\prime\Audio-clean
 
 %SCRIPT_DIR%\tools\paktool\PakTool.exe -x %SCRIPT_DIR%\prime\pakdump\dump\root\AudioGrp.pak -o %SCRIPT_DIR%\prime\pakdump\AudioGrp\
 
-%SCRIPT_DIR%\tools\urde\hecl.exe extract -y prime.iso AudioGrp.pak
+%SCRIPT_DIR%\tools\metaforce\hecl.exe extract -y prime.iso AudioGrp.pak
 
 if exist %SCRIPT_DIR%\prime\AudioGrp-clean\ rmdir %SCRIPT_DIR%\prime\AudioGrp-clean\ /s /q
 xcopy %SCRIPT_DIR%\prime\MP1\AudioGrp\ %SCRIPT_DIR%\prime\AudioGrp-clean\ /s /y
@@ -24,8 +24,8 @@ xcopy %SCRIPT_DIR%\prime\AudioGrp-clean\ %SCRIPT_DIR%\prime\MP1\AudioGrp\ /u /s 
 xcopy %SCRIPT_DIR%\mods\AudioGrp %SCRIPT_DIR%\prime\MP1\AudioGrp\ /u /s /y
 
 cd %SCRIPT_DIR%\prime
-%SCRIPT_DIR%\tools\urde\hecl.exe cook
-%SCRIPT_DIR%\tools\urde\hecl.exe package -y
+%SCRIPT_DIR%\tools\metaforce\hecl.exe cook
+%SCRIPT_DIR%\tools\metaforce\hecl.exe package -y
 cd %SCRIPT_DIR%
 
 call %SCRIPT_DIR%\tools\mod-pak.bat

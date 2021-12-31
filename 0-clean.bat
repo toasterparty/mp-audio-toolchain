@@ -22,7 +22,7 @@ del *.exe
 del *.ini
 del *.txt
 
-cd %SCRIPT_DIR%\tools\urde
+cd %SCRIPT_DIR%\tools\metaforce
 del *.dll
 del *.exe
 del *.ini

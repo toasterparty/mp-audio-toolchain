@@ -9,8 +9,8 @@ xcopy %SCRIPT_DIR%\prime\AudioGrp-clean\ %SCRIPT_DIR%\prime\MP1\AudioGrp\ /u /s 
 xcopy %SCRIPT_DIR%\mods\AudioGrp %SCRIPT_DIR%\prime\MP1\AudioGrp\ /u /s /y
 
 cd %SCRIPT_DIR%\prime
-%SCRIPT_DIR%\tools\urde\hecl.exe cook
-%SCRIPT_DIR%\tools\urde\hecl.exe package -y
+%SCRIPT_DIR%\tools\metaforce\hecl.exe cook
+%SCRIPT_DIR%\tools\metaforce\hecl.exe package -y
 cd %SCRIPT_DIR%
 
 call %SCRIPT_DIR%\tools\mod-pak.bat

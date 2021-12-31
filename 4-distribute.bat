@@ -28,8 +28,8 @@ del %MOD_NAME%\tools\wget.exe
 del %MOD_NAME%\tools\mod-hecl.bat
 del %MOD_NAME%\tools\tools.bat
 del %MOD_NAME%\tools\.gitignore
-del %MOD_NAME%\tools\urde\*.zip
-del %MOD_NAME%\tools\urde\.gitignore
+del %MOD_NAME%\tools\metaforce\*.zip
+del %MOD_NAME%\tools\metaforce\.gitignore
 del %MOD_NAME%\tools\paktool\*.zip
 del %MOD_NAME%\tools\paktool\.gitignore
 del %MOD_NAME%\tools\gcit\*.zip
