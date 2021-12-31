@@ -24,7 +24,6 @@ move %MOD_NAME%\tools\readme.txt %MOD_NAME%
 rmdir %MOD_NAME%\tools\7zip /s /q
 rmdir %MOD_NAME%\tools\audacity /s /q
 rmdir %MOD_NAME%\tools\dsp-header-copy /s /q
-del %MOD_NAME%\tools\wget.exe
 del %MOD_NAME%\tools\mod-hecl.bat
 del %MOD_NAME%\tools\tools.bat
 del %MOD_NAME%\tools\.gitignore

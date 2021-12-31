@@ -28,6 +28,3 @@ del *.exe
 del *.ini
 del *.txt
 del *.pdb
-
-cd %SCRIPT_DIR%\tools
-del .wget-hsts

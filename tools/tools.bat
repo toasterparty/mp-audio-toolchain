@@ -1,5 +1,4 @@
 @echo off
-set WGET=%SCRIPT_DIR%\tools\wget.exe -nc
 set UNZIP=%SCRIPT_DIR%\tools\7zip\7za.exe -bb0 -bd -y x
 set ZIP=%SCRIPT_DIR%\tools\7zip\7za.exe a -tzip
 
