@@ -78,7 +78,7 @@ Click `4-distribute.bat` and enter in the name of the mod (do not use spaces). O
 
 DSPADPCM Audacity Fork - https://github.com/jackoalan/audacity
 
-HECL - https://axiodl.com/
+Metaforce - https://axiodl.com/
 
 PakTool - https://github.com/arukibree/PakTool
 
