@@ -28,9 +28,9 @@ cd audacity
 %SCRIPT_DIR%\tools\7zip\7za.exe -bb0 -bd -y e audacity-gcdspadpcm-2.3.0-win.zip > nul
 cd ..
 
-if not exist urde mkdir urde
-cd urde
-%UNZIP% urde-50-win32-x86_64.zip > nul
+if not exist metaforce mkdir metaforce
+cd metaforce
+%UNZIP% metaforce-v0.1.3-173.7z > nul
 cd ..
 
 cd ..
