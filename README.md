@@ -14,6 +14,12 @@ Everything you need can be downloaded using the green "Code" button and selectin
 
 There are 5 `.bat` files which streamline the modding process. To use them, simply double click and wait for them to complete. They are numbered roughly in the order they are needed.
 
+# Requirements
+- Windows (Tested on Windows 10 Pro)
+- [Blender 2.93 LTS](https://www.blender.org/download/releases/2-93/)
+- ISO of Metroid Prime 1 for Gamecube (Tested on NTSC 0-00)
+- [Visual C++ Redist 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784) (both x86 and x64)
+
 ## 0 - Clean
 Clears all of the cached data. You should only need to use this if you having problems.
 
