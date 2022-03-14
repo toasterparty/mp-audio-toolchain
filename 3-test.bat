@@ -13,6 +13,9 @@ cd %SCRIPT_DIR%\prime
 %SCRIPT_DIR%\tools\metaforce\hecl.exe package -y
 cd %SCRIPT_DIR%
 
+xcopy %SCRIPT_DIR%\prime\Audio-clean\ %SCRIPT_DIR%\prime\pakdump\dump\root\Audio\ /u /s /y
+xcopy %SCRIPT_DIR%\mods\Audio\ %SCRIPT_DIR%\prime\pakdump\dump\root\Audio\ /u /s /y
+
 call %SCRIPT_DIR%\tools\mod-pak.bat
 
 %SCRIPT_DIR%\tools\gcit\gcit.exe %SCRIPT_DIR%\prime\pakdump\dump -q -d %SCRIPT_DIR%\prime_audio_mod.iso

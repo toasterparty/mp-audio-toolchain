@@ -1,8 +1,5 @@
 @echo off
 
-xcopy %SCRIPT_DIR%\prime\Audio-clean\ %SCRIPT_DIR%\prime\pakdump\dump\root\Audio\ /u /s /y
-xcopy %SCRIPT_DIR%\mods\Audio\ %SCRIPT_DIR%\prime\pakdump\dump\root\Audio\ /u /s /y
-
 if exist %SCRIPT_DIR%\prime\pakdump\AudioGrpNew\ rmdir %SCRIPT_DIR%\prime\pakdump\AudioGrpNew\ /s /q
 xcopy %SCRIPT_DIR%\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp\ %SCRIPT_DIR%\prime\pakdump\AudioGrpNew\ /s /y
 cd %SCRIPT_DIR%\prime\pakdump\AudioGrpNew\
