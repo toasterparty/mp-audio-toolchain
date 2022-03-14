@@ -6,6 +6,7 @@ import random
 
 dir = sys.argv[1]
 seed = int(sys.argv[2])
+percentage = float(sys.argv[3]) / 10.0
 
 print("Shuffling files in '%s' using seed '%d'..." % (dir, seed))
 
@@ -48,7 +49,11 @@ with tempfile.TemporaryDirectory() as tempdir:
     random.shuffle(oneshotfilepaths)
 
     for i in range(0,len(loopfilepaths)):
+        if random.random() > percentage:
+            continue
         shutil.copy(os.path.join(loopdir, str(i)), loopfilepaths[i])
 
     for i in range(0,len(oneshotfilepaths)):
+        if random.random() > percentage:
+            continue
         shutil.copy(os.path.join(nonloopdir, str(i)), oneshotfilepaths[i])
