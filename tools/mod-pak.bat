@@ -1,8 +1,8 @@
 @echo off
 
-if exist %SCRIPT_DIR%\prime\pakdump\AudioGrpNew\ rmdir %SCRIPT_DIR%\prime\pakdump\AudioGrpNew\ /s /q
-xcopy %SCRIPT_DIR%\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp\ %SCRIPT_DIR%\prime\pakdump\AudioGrpNew\ /s /y
-cd %SCRIPT_DIR%\prime\pakdump\AudioGrpNew\
+if exist .\prime\pakdump\AudioGrpNew\ rmdir .\prime\pakdump\AudioGrpNew\ /s /q
+xcopy .\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp\ .\prime\pakdump\AudioGrpNew\ /s /y
+cd .\prime\pakdump\AudioGrpNew\
 
 ren Atomic_AE0230B6 AE0230B6.AGSC
 ren BetaBeetle_8CCDD026 8CCDD026.AGSC
@@ -79,8 +79,8 @@ ren test_1EE1AD21 1EE1AD21.AGSC
 
 cd %SCRIPT_DIR%
 
-xcopy %SCRIPT_DIR%\prime\pakdump\AudioGrpNew\ %SCRIPT_DIR%\prime\pakdump\AudioGrp\ /u /s /y
+xcopy .\prime\pakdump\AudioGrpNew\ .\prime\pakdump\AudioGrp\ /u /s /y
 
-%SCRIPT_DIR%\tools\paktool\PakTool.exe -r MP1 %SCRIPT_DIR%\prime\pakdump\AudioGrp\ %SCRIPT_DIR%\prime\pakdump\AudioGrp.pak %SCRIPT_DIR%\tools\paktool\AudioGrp-pak.txt
+.\tools\paktool\PakTool.exe -r MP1 .\prime\pakdump\AudioGrp\ .\prime\pakdump\AudioGrp.pak .\tools\paktool\AudioGrp-pak.txt
 
-xcopy %SCRIPT_DIR%\prime\pakdump\AudioGrp.pak %SCRIPT_DIR%\prime\pakdump\dump\root\ /u /y
+xcopy .\prime\pakdump\AudioGrp.pak .\prime\pakdump\dump\root\ /u /y

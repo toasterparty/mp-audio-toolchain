@@ -2,14 +2,14 @@
 
 set /p MOD_NAME="Enter a name for the mod (no spaces):"
 
-set SCRIPT_DIR=%cd%
-call %SCRIPT_DIR%\tools\tools.bat
-call %SCRIPT_DIR%\tools\mod-hecl.bat
+set SCRIPT_DIR="%~dp0"
+call .\tools\tools.bat
+call .\tools\mod-hecl.bat
 
-if exist %SCRIPT_DIR%\mods\%MOD_NAME%\ rmdir %SCRIPT_DIR%\mods\%MOD_NAME%\ /s /q
-if exist %SCRIPT_DIR%\mods\%MOD_NAME%.zip del %SCRIPT_DIR%\mods\%MOD_NAME%.zip
+if exist .\mods\%MOD_NAME%\ rmdir .\mods\%MOD_NAME%\ /s /q
+if exist .\mods\%MOD_NAME%.zip del .\mods\%MOD_NAME%.zip
 
-cd %SCRIPT_DIR%\mods
+cd .\mods
 mkdir %MOD_NAME%
 mkdir %MOD_NAME%\tools
 mkdir %MOD_NAME%\Audio
@@ -17,7 +17,7 @@ mkdir %MOD_NAME%\AudioGrp
 
 xcopy Audio %MOD_NAME%\Audio /s /y
 xcopy AudioGrp %MOD_NAME%\AudioGrp /s /y
-xcopy %SCRIPT_DIR%\tools\ %MOD_NAME%\tools /s /y
+xcopy ..\tools\ %MOD_NAME%\tools /s /y
 move %MOD_NAME%\tools\patch.bat %MOD_NAME%
 move %MOD_NAME%\tools\readme.txt %MOD_NAME%
 
@@ -37,7 +37,7 @@ del %MOD_NAME%\tools\gcit\.gitignore
 
 %ZIP% %MOD_NAME%.zip %MOD_NAME%
 
-rmdir %SCRIPT_DIR%\mods\%MOD_NAME%\ /s /q
+rmdir %MOD_NAME% /s /q
 echo .
 echo .
 echo .

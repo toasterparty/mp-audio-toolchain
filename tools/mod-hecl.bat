@@ -1,7 +1,7 @@
 @echo off
 
-SET HDR_CP=%SCRIPT_DIR%\tools\dsp-header-copy\dsp-header-copy.exe
-SET CLEAN_DIR=%SCRIPT_DIR%\prime\AudioGrp-clean
+SET HDR_CP=.\tools\dsp-header-copy\dsp-header-copy.exe
+SET CLEAN_DIR=.\prime\AudioGrp-clean
 SET MOD_DIR=%MOD_DIR%
 
 if exist %MOD_DIR%\Atomic_AE0230B6\sample0014.dsp %HDR_CP% %CLEAN_DIR%\Atomic_AE0230B6\sample0014.dsp %MOD_DIR%\Atomic_AE0230B6\sample0014.dsp

@@ -1,5 +1,5 @@
 @echo off
-set SCRIPT_DIR=%cd%
-call %SCRIPT_DIR%\tools\tools.bat
+set SCRIPT_DIR="%~dp0"
+call .\tools\tools.bat
 
-start "" %SCRIPT_DIR%\tools\audacity\audacity.exe
+start "" .\tools\audacity\audacity.exe

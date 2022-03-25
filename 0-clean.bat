@@ -1,10 +1,10 @@
 @echo off
-set SCRIPT_DIR=%cd%
+set SCRIPT_DIR="%~dp0"
 
 cd %SCRIPT_DIR%
 del *.tmp
 
-if exist %SCRIPT_DIR%\prime rmdir %SCRIPT_DIR%\prime /s /q
+if exist .\prime rmdir .\prime /s /q
 
 cd %SCRIPT_DIR%\tools\audacity
 del *.dll
@@ -31,5 +31,7 @@ del *.pdb
 
 cd %SCRIPT_DIR%\tools
 del .wget-hsts
+
+cd %SCRIPT_DIR%
 
 pause

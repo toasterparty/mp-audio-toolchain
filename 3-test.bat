@@ -1,21 +1,21 @@
 @echo off
-set SCRIPT_DIR=%cd%
+set SCRIPT_DIR="%~dp0"
 
-call %SCRIPT_DIR%\tools\tools.bat
-call %SCRIPT_DIR%\tools\mod-hecl.bat
+call .\tools\tools.bat
+call .\tools\mod-hecl.bat
 
-if exist %SCRIPT_DIR%\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp rmdir %SCRIPT_DIR%\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp /s /q
-xcopy %SCRIPT_DIR%\prime\AudioGrp-clean\ %SCRIPT_DIR%\prime\MP1\AudioGrp\ /u /s /y
-xcopy %SCRIPT_DIR%\mods\AudioGrp %SCRIPT_DIR%\prime\MP1\AudioGrp\ /u /s /y
+if exist .\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp rmdir .\prime\.hecl\cooked\MP1.spec\MP1\AudioGrp /s /q
+xcopy .\prime\AudioGrp-clean\ .\prime\MP1\AudioGrp\ /u /s /y
+xcopy .\mods\AudioGrp .\prime\MP1\AudioGrp\ /u /s /y
 
-cd %SCRIPT_DIR%\prime
-%SCRIPT_DIR%\tools\metaforce\hecl.exe cook
-%SCRIPT_DIR%\tools\metaforce\hecl.exe package -y
+cd .\prime
+..\tools\metaforce\hecl.exe cook
+..\tools\metaforce\hecl.exe package -y
 cd %SCRIPT_DIR%
 
-xcopy %SCRIPT_DIR%\prime\Audio-clean\ %SCRIPT_DIR%\prime\pakdump\dump\root\Audio\ /u /s /y
-xcopy %SCRIPT_DIR%\mods\Audio\ %SCRIPT_DIR%\prime\pakdump\dump\root\Audio\ /u /s /y
+xcopy .\prime\Audio-clean\ .\prime\pakdump\dump\root\Audio\ /u /s /y
+xcopy .\mods\Audio\ .\prime\pakdump\dump\root\Audio\ /u /s /y
 
-call %SCRIPT_DIR%\tools\mod-pak.bat
+call .\tools\mod-pak.bat
 
-%SCRIPT_DIR%\tools\gcit\gcit.exe %SCRIPT_DIR%\prime\pakdump\dump -q -d %SCRIPT_DIR%\prime_audio_mod.iso
+.\tools\gcit\gcit.exe .\prime\pakdump\dump -q -d .\prime_audio_mod.iso

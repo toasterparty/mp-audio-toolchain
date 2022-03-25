@@ -1,9 +1,9 @@
 @echo off
-set WGET=%SCRIPT_DIR%\tools\wget.exe -nc
 set UNZIP=%SCRIPT_DIR%\tools\7zip\7za.exe -bb0 -bd -y x
 set ZIP=%SCRIPT_DIR%\tools\7zip\7za.exe a -tzip
 
 cd %SCRIPT_DIR%
+
 if not exist mods mkdir mods
 cd mods
 if not exist Audio mkdir Audio
@@ -25,7 +25,7 @@ cd ..
 
 if not exist audacity mkdir audacity
 cd audacity
-%SCRIPT_DIR%\tools\7zip\7za.exe -bb0 -bd -y e audacity-gcdspadpcm-2.3.0-win.zip > nul
+%UNZIP% audacity-gcdspadpcm-2.3.0-win.7z > nul
 cd ..
 
 if not exist metaforce mkdir metaforce

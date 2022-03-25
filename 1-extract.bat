@@ -1,23 +1,26 @@
 @echo off
-set SCRIPT_DIR=%cd%
-call %SCRIPT_DIR%\tools\tools.bat
+set SCRIPT_DIR="%~dp0"
 
-if exist %SCRIPT_DIR%\prime\pakdump\ rmdir %SCRIPT_DIR%\prime\pakdump\ /s /q
+cd %SCRIPT_DIR%
 
-%SCRIPT_DIR%\tools\gcit\gcit.exe %SCRIPT_DIR%\prime.iso -f GCReEx -q -d %SCRIPT_DIR%\prime\pakdump\
+call .\tools\tools.bat
 
-for /d %%i in (%SCRIPT_DIR%\prime\pakdump\*) do (
+if exist .\prime\pakdump\ rmdir .\prime\pakdump\ /s /q
+
+.\tools\gcit\gcit.exe .\prime.iso -f GCReEx -q -d .\prime\pakdump\
+
+for /d %%i in (.\prime\pakdump\*) do (
 ren "%%i" dump
 )
 
-if exist %SCRIPT_DIR%\prime\Audio-clean\ rmdir %SCRIPT_DIR%\prime\Audio-clean\ /s /q
-xcopy %SCRIPT_DIR%\prime\pakdump\dump\root\Audio\ %SCRIPT_DIR%\prime\Audio-clean\ /s /y
+if exist .\prime\Audio-clean\ rmdir .\prime\Audio-clean\ /s /q
+xcopy .\prime\pakdump\dump\root\Audio\ .\prime\Audio-clean\ /s /y
 
-%SCRIPT_DIR%\tools\paktool\PakTool.exe -x %SCRIPT_DIR%\prime\pakdump\dump\root\AudioGrp.pak -o %SCRIPT_DIR%\prime\pakdump\AudioGrp\
+.\tools\paktool\PakTool.exe -x .\prime\pakdump\dump\root\AudioGrp.pak -o .\prime\pakdump\AudioGrp\
 
-%SCRIPT_DIR%\tools\metaforce\hecl.exe extract -y prime.iso AudioGrp.pak
+.\tools\metaforce\hecl.exe extract -y prime.iso AudioGrp.pak
 
-if exist %SCRIPT_DIR%\prime\AudioGrp-clean\ rmdir %SCRIPT_DIR%\prime\AudioGrp-clean\ /s /q
-xcopy %SCRIPT_DIR%\prime\MP1\AudioGrp\ %SCRIPT_DIR%\prime\AudioGrp-clean\ /s /y
+if exist .\prime\AudioGrp-clean\ rmdir .\prime\AudioGrp-clean\ /s /q
+xcopy .\prime\MP1\AudioGrp\ .\prime\AudioGrp-clean\ /s /y
 
 pause
