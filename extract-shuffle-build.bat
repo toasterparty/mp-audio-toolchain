@@ -2,11 +2,15 @@
 
 set /p seed="Input a seed # (same seed = same sounds): "
 echo %seed%|findstr /r /c:"^[0-9][0-9]*$" >nul
-if errorlevel 1 (echo Invalid seed number) else (echo .)
+if errorlevel 1 (echo Invalid seed number) else (echo using seed %seed%)
 
-set /p randomlevel="On a scale of 1 to 10, how random?: "
+set /p sfxrandomlevel="On a scale of 0 to 10, how much should *SOUND EFFECTS* be shufled?: "
+set /p musicrandomlevel="On a scale of 0 to 12, how much should *MUSIC* be shuffled?: "
 
-set SCRIPT_DIR=%~dp0
+set SCRIPT_DIR="%~dp0"
+
+cd %SCRIPT_DIR%
+
 call .\tools\tools.bat
 
 if exist .\prime\pakdump\ rmdir .\prime\pakdump\ /s /q
@@ -23,7 +27,6 @@ xcopy .\prime\pakdump\dump\root\Audio\ .\prime\Audio-clean\ /s /y
 .\tools\paktool\PakTool.exe -x .\prime\pakdump\dump\root\AudioGrp.pak -o .\prime\pakdump\AudioGrp\
 .\tools\metaforce\hecl.exe extract -y prime.iso AudioGrp.pak
 
-
 if exist .\prime\AudioGrp-clean\ rmdir .\prime\AudioGrp-clean\ /s /q
 xcopy .\prime\MP1\AudioGrp\ .\prime\AudioGrp-clean\ /s /y
 
@@ -33,8 +36,8 @@ xcopy .\prime\AudioGrp-clean\ .\prime\MP1\AudioGrp\ /s /y
 if exist .\prime\pakdump\dump\root\Audio\ rmdir .\prime\pakdump\dump\root\Audio\ /s /q
 xcopy .\prime\Audio-clean\ .\prime\pakdump\dump\root\Audio\ /s /y
 
-py .\tools\shuffle.py .\prime\MP1\AudioGrp\ %seed% %randomlevel%
-py .\tools\shuffle.py .\prime\pakdump\dump\root\Audio\ %seed% %randomlevel%
+py .\tools\shuffle.py .\prime\pakdump\dump\root\Audio\ %seed% %musicrandomlevel%
+py .\tools\shuffle.py .\prime\MP1\AudioGrp\ %seed% %sfxrandomlevel%
 
 cd prime
 ..\tools\metaforce\hecl.exe cook
