@@ -84,12 +84,8 @@ with tempfile.TemporaryDirectory() as tempdir:
     for filepath in get_filepaths():
         filename = path_to_filename(filepath)
 
-        if percentage <= random.random():
-            if filename.endswith("L.dsp") or filename.endswith("R.dsp"):
-                if random.random() > 0.5:
-                    continue
-            else:
-                continue
+        if percentage <= random.random() and (not stereo_shuffle or filename.endswith("L.dsp")):
+            continue
 
         if (not all_audio_files and filename in CHAOTIC_MUSIC_FILENAMES):
             continue
@@ -111,6 +107,7 @@ with tempfile.TemporaryDirectory() as tempdir:
             oneshot_id_to_filename[id] = filename
             oneshot_filepath_to_id[filepath] = id
 
+    count = 0
     for (pathlist, id_to_filename, filepath_to_id, tempdir) in [(loopfilepaths, loop_id_to_filename, loop_filepath_to_id, loopdir), (oneshotfilepaths, oneshot_id_to_filename, oneshot_filepath_to_id, nonloopdir)]:
         pathlist.sort()
 
@@ -121,10 +118,6 @@ with tempfile.TemporaryDirectory() as tempdir:
                         find_partner(filepath, pathlist)
                     except:
                         pathlist.remove(filepath)
-                        # print("removing %s as it won't have a partner" % filepath)
-
-        # for filepath in pathlist:
-        #     os.remove(filepath)
 
         src_pathlist = []
         dst_pathlist = []
@@ -135,8 +128,6 @@ with tempfile.TemporaryDirectory() as tempdir:
 
         while len(dst_pathlist) != 0:
             dst_filepath = random.choice(dst_pathlist)
-
-            # assert dst_filepath not in get_filepaths()
 
             dst_filename = path_to_filename(dst_filepath)
 
@@ -208,5 +199,8 @@ with tempfile.TemporaryDirectory() as tempdir:
                 dst_pathlist.remove(dst_filepath)
                 src_pathlist.remove(src_filepath)
                 # print("%s -> %s" % (src_filename, dst_filename))
+            count += 1
     assert start_count == len(get_filepaths())
     assert start_count != 0
+
+    print("Shuffled %d audio files." % count)
